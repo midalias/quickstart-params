@@ -4,18 +4,18 @@ project:
   lambda_source_path: functions/source
   lambda_zip_path: functions/packages
   regions:
-  - us-east-1
-  - us-east-2
+#  - us-east-1
+#  - us-east-2
   - us-west-2
-  - eu-west-1
-  - ca-central-1
+#  - eu-west-1
+#  - ca-central-1
   parameters:
     RemoteAccessCIDR: 10.0.0.0/16
-    QSS3BucketName: $[taskcat_autobucket]
-    QSS3BucketRegion: $[taskcat_current_region]
+    QSS3BucketName: tcat-quickstart-cloudbees-core-uswest1243
+    QSS3BucketRegion: 'us-west-2'
     AvailabilityZones: $[taskcat_genaz_3]
-  template: templates/cloudbees-core-master.template.yaml
+  template: templates/cloudbees-core-existing-vpc.template.yaml
 tests:
   default:
     regions:
-    - us-east-1
+    - us-west-2
