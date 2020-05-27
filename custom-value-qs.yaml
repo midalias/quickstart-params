@@ -1,0 +1,3 @@
+OperationsCenter:
+   # Set the HostName for the Operation Center
+   HostName: 'cloudbeescore.devops.cv500-telematics.net'
